@@ -89,8 +89,8 @@ function create(cfg) {
 				for (var i = 0; i < inputsCount + outputsCount; i++) {
 					if (i < states.length) {
 						var pinName =(i < inputsCount) 
-							? 'i.' +  i
-							: 'o.' + (i - inputsCount);
+							? 'i.' + (i + 1)
+							: 'o.' + (i - inputsCount + 1);
 							
 						updateHandler(pinName, states[i]);
 					}
